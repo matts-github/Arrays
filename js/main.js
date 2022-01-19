@@ -12,4 +12,3 @@ const getData = () => {
 };
 
 getBtn.addEventListener('click', getData);
-// postBtn.addEventListener('click', sendData);
