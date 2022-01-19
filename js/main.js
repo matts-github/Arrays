@@ -7,7 +7,7 @@ const randomPage = Math.floor(Math.random() * (10) + 1)
 const getData = () => {
   axios.get(`${picsumURL}${randomPage}&limit=100`)
     .then(response => {
-      console.log(response.data);
+      document.getElementById("myImg").src = response.data[${picsumURL}]['download_url'];
   });
 };
 
