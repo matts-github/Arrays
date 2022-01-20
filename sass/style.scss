@@ -24,7 +24,7 @@ img {
     width: 500px;
     height: 500px;
     max-width: 100%;
-    display: none;
+    // display: none;
 }
 h1 {
     color: #fff;
@@ -63,4 +63,46 @@ header {
     cursor: pointer;
     transition: 0.5s;
     margin-left: 10px;
+}
+h3 {
+    position: relative;
+    font-size: 20px;
+    color: #f9f9f9;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#form {
+    position: relative;
+}
+#form #email {
+    width: 300px;
+    background: #292929;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-style: 18px;
+}
+#form .inputBox {
+    position: relative;
+}
+#text {
+    display: block;
+    color: #000;
+    font-weight: 500;
+    font-style: italic;
+    padding: 5px;
+}
+#form.invalid .inputBox:before {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    background: url(invalid.png);
+    background-size: cover;
+    z-index: 1000;
 }

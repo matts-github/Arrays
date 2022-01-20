@@ -12,21 +12,38 @@
             <h1>Random Image Generator!</h1>
         </header>  
 
+            <h3>Email:</h3>
+            <form id="form" action="#">
+                <div class="inputBox">
+                    <input type="text" name="" id="email"
+                    placeholder="Enter Email Address" onkeydown="validation()">
+                    <span id="text"></span>
+                </div>
+                <div class="inputBox">
+                    <button id="post-btn">Save</button>
+                </div>
+                <div id="msg">
+                    <pre></pre>
+                </div>
+            </form>
+        </div>
+
         <section id="control-center">
             <button id="get-btn">Click Me!</button>
-            <button id="post-btn">Save</button>
+            
             
         </section>
             
         <img src="https://picsum.photos/200/300" alt="" id="myImg">
 
-        <form id="contact-form" method="POST" action accept-charset="utf-8">
+        <!-- <form id="contact-form" method="POST" action accept-charset="utf-8">
             <div class="email">
                 <span id="text"></span>
                 <input type="text" id="email" name="email" class="style-input" placeholder="Email">
                 <div class="error"></div>
-                <button class="btn" onclick="validation()">Submit</button>
+                <button class="b">Submit</button>
             </div>
-        </form>
+        </form> -->
+
     </body>
 </html>
