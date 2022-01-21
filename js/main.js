@@ -84,4 +84,35 @@ document.addEventListener('DOMContentLoaded', ()=>{
   document.getElementById('post-btn').addEventListener('click', addPicture);
 });
 
-var arr1 = []
+let email = document.getElementById('email');
+console.log('email ', email);
+let pic = document.getElementById('myMail');
+console.log('myMail ', email);
+
+let westeros = {
+  cersi: 'Lannister',
+  arya: 'Stark',
+  jon: 'Snow',
+  brienne: 'Tarth',
+  daenerys: 'Targaryen',
+  theon: 'Greyjoy',
+  jorah: 'Mormont',
+  margaery: 'Tyrell',
+  sandor: 'Clegane',
+  samwell: 'Tarly',
+  ramsey: 'Bolton'
+}
+
+let keys = Object.keys(westeros);
+// console.log('Keys ', keys);
+let vals = Object.values(westeros);
+// console.log('Vals', vals);
+let entries = Object.entries(westeros);
+// console.log('Entries', entries);
+
+
+const image = {
+  email: document.getElementById('email'),
+  img: picsumURL
+};
+console.log(image);
