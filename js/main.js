@@ -17,27 +17,7 @@ getBtn.addEventListener('click', getData);
 
 // Form Validation
 
-// function validation()
-// {
 
-//     var email = document.getElementById("email").value;
-//     var pattern = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
-
-//     if (email.match(pattern))
-//     {
-//         form.classList.add("valid")
-//         form.classList.remove("invalid")
-//         text.innerHTML = "Your Email Address in Valid.";
-//         text.style.color = "#00ff00";
-//     }
-//     else
-//     {
-//         form.classList.remove("valid")
-//         form.classList.add("invalid")
-//         text.innerHTML = "Please Enter Valid Email Address.";
-//         text.style.color = "#ff0000";
-//     }
-// }
 
 function validation()
 {
@@ -70,25 +50,24 @@ function validation()
   }
 }
 
-let movies = [];
+let pictures = [];
 
-const addMovie = (ev)=>{
+const addPicture = (ev)=>{
   ev.preventDefault(); // To stop the form from submitting
-  let movie = {
-      id: Date.now(),
+  let picture = {
       email: document.getElementById('email').value
   }
-  movies.push(movie);
+  pictures.push(picture);
   document.forms[0].reset(); // To clear the form for the next entries
 
   // For display purposes only
-  console.warn('added' , {movies} );
+  console.warn('added' , {pictures} );
   let pre = document.querySelector('#msg pre');
-  pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
+  pre.textContent = '\n' + JSON.stringify(pictures, '\t', 2);
 
   // Saving to local storage
-  localStorage.setItem('MyMovieList', JSON.stringify(movies) );
+  localStorage.setItem('MyPictureList', JSON.stringify(pictures) );
 }
 document.addEventListener('DOMContentLoaded', ()=>{
-  document.getElementById('post-btn').addEventListener('click', addMovie);
+  document.getElementById('post-btn').addEventListener('click', addPicture);
 });
