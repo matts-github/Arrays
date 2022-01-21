@@ -12,8 +12,20 @@ const getData = () => {
       document.getElementById("myImg").src = response.data[`${randomPage}`]['download_url'];
   });
 };
+const getEmail = () => {
+  const randomPage = Math.floor(Math.random() * (10) + 1)
+  axios.get(`${picsumURL}${randomPage}&limit=100`)
+    .then(response => {
+      console.log(response.data[`${randomPage}`]['download_url']);
+      document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
+  });
+};
+function changepic(div) {
+	document.getElementById(div).src = "https://picsum.photos/200/300";
+}
 
 getBtn.addEventListener('click', getData);
+postBtn.addEventListener('click', getEmail);
 
 // Form Validation
 
@@ -71,3 +83,5 @@ const addPicture = (ev)=>{
 document.addEventListener('DOMContentLoaded', ()=>{
   document.getElementById('post-btn').addEventListener('click', addPicture);
 });
+
+var arr1 = []
