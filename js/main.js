@@ -1,5 +1,10 @@
+
+
+// Saved emails
+
 const getBtn = document.getElementById('get-btn');
 const postBtn = document.getElementById('post-btn');
+var savedEmails = {};
 
 const picsumURL = 'https://picsum.photos/v2/list?page='
 
@@ -26,9 +31,6 @@ function changepic(div) {
 
 getBtn.addEventListener('click', getData);
 postBtn.addEventListener('click', getEmail);
-
-// Form Validation
-
 
 
 function validation()
@@ -62,57 +64,35 @@ function validation()
   }
 }
 
-let pictures = [];
+// Email storage
 
-const addPicture = (ev)=>{
-  ev.preventDefault(); // To stop the form from submitting
-  let picture = {
-      email: document.getElementById('email').value
-  }
-  pictures.push(picture);
-  document.forms[0].reset(); // To clear the form for the next entries
+// let pictures = [];
 
-  // For display purposes only
-  console.warn('added' , {pictures} );
-  let pre = document.querySelector('#msg pre');
-  pre.textContent = '\n' + JSON.stringify(pictures, '\t', 2);
+// const addPicture = (ev)=>{
+//   ev.preventDefault(); // To stop the form from submitting
+//   let picture = {
+//       email: document.getElementById('email').value
+//   }
+//   pictures.push(picture);
+//   document.forms[0].reset(); // To clear the form for the next entries
 
-  // Saving to local storage
-  localStorage.setItem('MyPictureList', JSON.stringify(pictures) );
-}
-document.addEventListener('DOMContentLoaded', ()=>{
-  document.getElementById('post-btn').addEventListener('click', addPicture);
-});
+//   // For display purposes only
+//   console.warn('added' , {pictures} );
+//   let pre = document.querySelector('#msg pre');
+//   pre.textContent = '\n' + JSON.stringify(pictures, '\t', 2);
 
-let email = document.getElementById('email');
-console.log('email ', email);
-let pic = document.getElementById('myMail');
-console.log('myMail ', email);
+//   // Saving to local storage
+//   localStorage.setItem('MyPictureList', JSON.stringify(pictures) );
+// }
+// document.addEventListener('DOMContentLoaded', ()=>{
+//   document.getElementById('post-btn').addEventListener('click', addPicture);
+// });
 
-let westeros = {
-  cersi: 'Lannister',
-  arya: 'Stark',
-  jon: 'Snow',
-  brienne: 'Tarth',
-  daenerys: 'Targaryen',
-  theon: 'Greyjoy',
-  jorah: 'Mormont',
-  margaery: 'Tyrell',
-  sandor: 'Clegane',
-  samwell: 'Tarly',
-  ramsey: 'Bolton'
-}
-
-let keys = Object.keys(westeros);
-// console.log('Keys ', keys);
-let vals = Object.values(westeros);
-// console.log('Vals', vals);
-let entries = Object.entries(westeros);
-// console.log('Entries', entries);
-
-
-const image = {
-  email: document.getElementById('email'),
-  img: picsumURL
-};
-console.log(image);
+let email = document.getElementById('email').value;
+// console.log('email ', email);
+let pic = document.getElementById('myMail').value;
+// console.log('myMail ', email);
+const mail = {[email]: pic};
+const myJSON = JSON.stringify(mail);
+console.log(myJSON);
+document.getElementById("result").innerHTML = myJSON;
