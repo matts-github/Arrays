@@ -17,14 +17,27 @@ const getData = () => {
       document.getElementById("myImg").src = response.data[`${randomPage}`]['download_url'];
   });
 };
+// const getEmail = () => {
+//   let email = document.getElementById('email').value;
+//       let pic = response.data[`${randomPage}`]['download_url'];
+//       const mail = {[email]: pic};
+//       console.log(mail);
+//       const myJSON = JSON.stringify(mail);
+//       console.log(myJSON);
+//       document.getElementById("result").innerHTML = myJSON;
+//   };
 const getEmail = () => {
   const randomPage = Math.floor(Math.random() * (10) + 1)
-  axios.get(`${picsumURL}${randomPage}&limit=100`)
+  axios.get(${picsumURL}${randomPage}&limit=100)
     .then(response => {
-      console.log(response.data[`${randomPage}`]['download_url']);
-      document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
+      let email = document.getElementById('email').value;
+      let pic = response.data[`${randomPage}`]['download_url'];
+      const mail = {[email]: pic};
+      console.log(mail);
+      document.getElementById("myMail").src = response.data[${randomPage}]['download_url'];
   });
 };
+
 function changepic(div) {
 	document.getElementById(div).src = "https://picsum.photos/200/300";
 }
@@ -88,11 +101,3 @@ function validation()
 //   document.getElementById('post-btn').addEventListener('click', addPicture);
 // });
 
-let email = document.getElementById('email').value;
-// console.log('email ', email);
-let pic = document.getElementById('myMail').value;
-// console.log('myMail ', email);
-const mail = {[email]: pic};
-const myJSON = JSON.stringify(mail);
-console.log(myJSON);
-document.getElementById("result").innerHTML = myJSON;
