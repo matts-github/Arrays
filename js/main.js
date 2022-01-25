@@ -28,13 +28,13 @@ const getData = () => {
 //   };
 const getEmail = () => {
   const randomPage = Math.floor(Math.random() * (10) + 1)
-  axios.get(${picsumURL}${randomPage}&limit=100)
+  axios.get(`${picsumURL}${randomPage}&limit=100`)
     .then(response => {
       let email = document.getElementById('email').value;
       let pic = response.data[`${randomPage}`]['download_url'];
-      const mail = {[email]: pic};
-      console.log(mail);
-      document.getElementById("myMail").src = response.data[${randomPage}]['download_url'];
+      savedEmails = { ...savedEmails, [email]: pic};
+      console.log(savedEmails);
+      document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
   });
 };
 
