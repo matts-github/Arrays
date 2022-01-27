@@ -49,6 +49,7 @@ const getEmail = () => {
       //savedEmails = { ...savedEmails, [email]: pic};
       console.log(savedEmails);
       document.getElementById('generator').innerHTML = JSON.stringify(savedEmails);
+      document.getElementById('putImgHere').src = savedEmails[email].at(-1);
 
       //generate a new random image
       document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
