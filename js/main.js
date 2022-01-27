@@ -32,9 +32,11 @@ const getEmail = () => {
     .then(response => {
       let email = document.getElementById('email').value;
       let pic = response.data[`${randomPage}`]['download_url'];
-      savedEmails = { ...savedEmails, [email]: pic};
+      savedEmails = { ...savedEmails, [email]: [pic]};
       console.log(savedEmails);
       document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
+      
+     
   });
 };
 
@@ -100,4 +102,3 @@ function validation()
 // document.addEventListener('DOMContentLoaded', ()=>{
 //   document.getElementById('post-btn').addEventListener('click', addPicture);
 // });
-
