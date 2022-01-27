@@ -32,11 +32,30 @@ const getEmail = () => {
     .then(response => {
       let email = document.getElementById('email').value;
       let pic = response.data[`${randomPage}`]['download_url'];
-      savedEmails = { ...savedEmails, [email]: [pic]};
+
+      if (email === "") {
+        //stop from working
+    }else{
+       //carry on as usual
+    
+
+      //check if email is already being used
+      if (email in savedEmails) {
+        savedEmails[email].push(pic);
+      }else{
+        savedEmails = { ...savedEmails, [email]: [pic]};
+      }
+
+      //savedEmails = { ...savedEmails, [email]: pic};
       console.log(savedEmails);
+      document.getElementById('generator').innerHTML = JSON.stringify(savedEmails);
+
+      //generate a new random image
       document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
-      
-     
+
+    }
+
+
   });
 };
 
