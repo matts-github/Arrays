@@ -186,3 +186,8 @@ div#msg {
     font-style: italic;
     transition: .3s;
 }
+@media screen and (min-width: 1285px) {
+    img {
+        width: 730px;
+    }
+}

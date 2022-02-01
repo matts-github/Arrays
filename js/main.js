@@ -17,15 +17,7 @@ const getData = () => {
       document.getElementById("myImg").src = response.data[`${randomPage}`]['download_url'];
   });
 };
-// const getEmail = () => {
-//   let email = document.getElementById('email').value;
-//       let pic = response.data[`${randomPage}`]['download_url'];
-//       const mail = {[email]: pic};
-//       console.log(mail);
-//       const myJSON = JSON.stringify(mail);
-//       console.log(myJSON);
-//       document.getElementById("result").innerHTML = myJSON;
-//   };
+
 const getEmail = () => {
   const randomPage = Math.floor(Math.random() * (10) + 1)
   axios.get(`${picsumURL}${randomPage}&limit=100`)
@@ -57,10 +49,7 @@ const getEmail = () => {
       const para = document.createElement("p");
       para.innerText = [email];
       document.getElementById('generator').appendChild(para);
-      //generate a new random image
-      // document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
-
-      //Display saved images in html.
+      
       
 
     }
@@ -108,30 +97,3 @@ function validation()
   }
 }
 
-// Email storage
-
-// let pictures = [];
-
-// const addPicture = (ev)=>{
-//   ev.preventDefault(); // To stop the form from submitting
-//   let picture = {
-//       email: document.getElementById('email').value
-//   }
-//   pictures.push(picture);
-//   document.forms[0].reset(); // To clear the form for the next entries
-
-//   // For display purposes only
-//   console.warn('added' , {pictures} );
-//   let pre = document.querySelector('#msg pre');
-//   pre.textContent = '\n' + JSON.stringify(pictures, '\t', 2);
-
-//   // Saving to local storage
-//   localStorage.setItem('MyPictureList', JSON.stringify(pictures) );
-// }
-// document.addEventListener('DOMContentLoaded', ()=>{
-//   document.getElementById('post-btn').addEventListener('click', addPicture);
-// });
-
-// foreach(x in savedEmails[email]) {
-//   document.getElementById("show-array").innerHTML += <img src="+savedEmails[email][x]+"></img>;
-// }
