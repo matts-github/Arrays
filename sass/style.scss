@@ -19,12 +19,20 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
 }
+#putImgHere {
+    width: 1500px;
+    height: 500px;
+}
 img {
     padding-top: 100px;
-    width: 500px;
-    height: 500px;
+    width: 220px;
     max-width: 100%;
+    padding: 5px;
     // display: none;
+}
+img:hover {
+    transform: scale(1.1);
+    transition: .3s;
 }
 h1 {
     color: #fff;
@@ -62,7 +70,7 @@ header {
     padding: 10px 15px;
     cursor: pointer;
     transition: 0.5s;
-    margin-left: 10px;
+    margin-left: 10px;;
 }
 h3 {
     position: relative;
@@ -109,30 +117,72 @@ h3 {
 div#msg {
     color: #fff;
 }
+
+#generator {
+    color: #540804;
+    font-size: 7rem;
+}
+#generator p {
+    color: #fff;
+    border: solid 5px #000;
+    background-color: #000;
+    text-align: center;
+    font-style: italic; 
+    font-size: 25px;
+}
+
+@media screen and (max-width: 460px) {
+    img {
+        width: 210px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     img {
         padding-top: 100px;
-        width: 700px;
-        height: 600px;
+        width: 250px;
+        height: 350px;
         max-width: 100%;
         // display: none;
+    }
+    #generator p {
+        color: #fff;
+        border: solid 5px #000;
+        background-color: #000;
+        text-align: center;
+        font-style: italic; 
+        font-size: 50px;
     }
 }
 @media screen and (min-width: 992px) {
     img {
         padding-top: 100px;
-        width: 900px;
-        height: 700px;
+        width: 250px;
+        height: 350px;
         max-width: 100%;
         // display: none;
+    }
+    #generator p {
+        color: #fff;
+        border: solid 5px #000;
+        background-color: #000;
+        text-align: center;
+        font-style: italic; 
+        font-size: 100px;
     }
 }
 @media screen and (min-width: 1260px) {
     img {
         padding-top: 100px;
-        width: 1100px;
-        height: 900px;
+        width: 630px;
+        height: 500px;
         max-width: 100%;
         // display: none;
     }
+}
+#generator p:hover {
+    color: #540804;
+    border: #fff;
+    font-style: italic;
+    transition: .3s;
 }

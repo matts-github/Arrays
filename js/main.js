@@ -46,13 +46,22 @@ const getEmail = () => {
         savedEmails = { ...savedEmails, [email]: [pic]};
       }
 
-      //savedEmails = { ...savedEmails, [email]: pic};
+      // savedEmails = { ...savedEmails, [email]: pic};
       console.log(savedEmails);
-      document.getElementById('generator').innerHTML = JSON.stringify(savedEmails);
-      document.getElementById('putImgHere').src = savedEmails[email].at(-1);
+      document.getElementById('generator').innerHTML = JSON.stringify(email);
+      for (x in savedEmails[email]) {
+      document.getElementById("generator").innerHTML += '<img src="'+ savedEmails[email][x] +'" style="width:10px height:10px" />';
+      };
+      document.getElementById("putImgHere").src = savedEmails[email].at(-1);
 
+      const para = document.createElement("p");
+      para.innerText = [email];
+      document.getElementById('generator').appendChild(para);
       //generate a new random image
-      document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
+      // document.getElementById("myMail").src = response.data[`${randomPage}`]['download_url'];
+
+      //Display saved images in html.
+      
 
     }
 
@@ -122,3 +131,7 @@ function validation()
 // document.addEventListener('DOMContentLoaded', ()=>{
 //   document.getElementById('post-btn').addEventListener('click', addPicture);
 // });
+
+// foreach(x in savedEmails[email]) {
+//   document.getElementById("show-array").innerHTML += <img src="+savedEmails[email][x]+"></img>;
+// }
