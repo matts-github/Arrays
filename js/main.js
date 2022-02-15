@@ -1,6 +1,5 @@
 
-
-// Saved emails
+// Variables
 
 const getBtn = document.getElementById('get-btn');
 const postBtn = document.getElementById('post-btn');
@@ -22,6 +21,7 @@ const getEmail = () => {
   const randomPage = Math.floor(Math.random() * (10) + 1)
   axios.get(`${picsumURL}${randomPage}&limit=100`)
     .then(response => {
+      
       let email = document.getElementById('email').value;
       let pic = response.data[`${randomPage}`]['download_url'];
 
@@ -40,17 +40,32 @@ const getEmail = () => {
 
       // savedEmails = { ...savedEmails, [email]: pic};
       console.log(savedEmails);
-      document.getElementById('generator').innerHTML = JSON.stringify(email);
-      for (x in savedEmails[email]) {
-      document.getElementById("generator").innerHTML += '<img src="'+ savedEmails[email][x] +'" style="width:10px height:10px" />';
-      };
-      document.getElementById("putImgHere").src = savedEmails[email].at(-1);
+      for (var i = 0; i < [savedEmails].length; i++) {
+      document.getElementById('output').innerHTML = JSON.stringify(email);
+      for (var j = 0; j < savedEmails[email].length; j++) {
+        
+      document.getElementById("output").innerHTML += '<img src="'+ savedEmails[email][j] +'" style="width:10px height:10px" />';
+      }
+    };
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    document.getElementById("putImgHere").src = savedEmails[email].at(-1);
+      // console.log(response.data[`${randomPage}`]['download_url']);
 
-      const para = document.createElement("p");
-      para.innerText = [email];
-      document.getElementById('generator').appendChild(para);
+      // const para = document.createElement("p");
+      // para.innerHTML = += '<img src="'+ savedEmails[email][i] +'" style="width:10px height:10px" />';
+      // document.getElementById('output').appendChild(para);
       
-      
+      // const para = document.createElement("p");
+      // para.innerText = [savedEmails];
+      // document.getElementById('output').(para);
 
     }
 
