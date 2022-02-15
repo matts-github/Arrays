@@ -44,7 +44,41 @@ const getEmail = () => {
       document.getElementById('output').innerHTML = JSON.stringify(email);
       for (var j = 0; j < savedEmails[email].length; j++) {
         
-      document.getElementById("output").innerHTML += '<img src="'+ savedEmails[email][j] +'" style="width:10px height:10px" />';
+        // Defining variable
+        let userCollection = "";
+
+        // Looping through the email keys in the savedEmails object
+        for (email in savedEmails) {
+            console.log(`what is: ${JSON.stringify(email)}`);
+            console.log(savedEmails);
+
+            // document.getElementById("output").innerHTML +=
+            //     JSON.stringify(email);
+
+            // Variables for key and value
+            let emailToAdd = `<h3> ${JSON.stringify(email)}</h3>`;
+            let imgsToAdd = "";
+
+            // Looping through the entire object
+            for (var j = 0; j < savedEmails[email].length; j++) {
+                // document.getElementById("output").innerHTML +=
+                //     '<img src="' +
+                //     savedEmails[email][j] +
+                //     '" style="width:10px height:10px" />';
+                console.log(savedEmails[email]);
+
+                // Variable with the image loop attatched to it
+                let imgToAdd = `<img src=${savedEmails[email][j]} style="width:10px height:10px" />`;
+                
+                imgsToAdd += imgToAdd;
+            }
+
+            // Adding the email and images variables into the userCollection varible
+            userCollection += `${emailToAdd} ${imgsToAdd}`;
+        }
+      
+        // Displaying userCollection variable in the HTML
+        document.getElementById("output").innerHTML += userCollection;
       }
     };
       
@@ -56,7 +90,7 @@ const getEmail = () => {
     
     
     
-    document.getElementById("putImgHere").src = savedEmails[email].at(-1);
+    // document.getElementById("putImgHere").src = savedEmails[email].at(-1);
       // console.log(response.data[`${randomPage}`]['download_url']);
 
       // const para = document.createElement("p");
