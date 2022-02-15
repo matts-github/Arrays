@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <title>Random Image Generator</title>
     <head>
+        <title>Random Image Generator</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="js/main.js" defer></script>
     </head>
     <body>
-        
-        <header>
-            <h1>Random Image Generator!</h1>
-        </header> 
-        
-        
+        <main>  
+            <header>
+                <h1>Random Image Generator!</h1>
+            </header> 
 
-        <div src="https://picsum.photos/200/300" id="result">
+            </div>
 
-        </div>
-
-            <h3>Email:</h3>
-            <form id="form" action="#">
-                <div class="inputBox">
-                    <input type="email" name="" id="email"
-                    placeholder="Enter Email Address">
-                    <span id="text"></span>
-                </div>
-                <div class="inputBox">
-                    <button id="post-btn" onclick="validation()">Save</button>
-                </div>
-                <div id='msg'>
-                    <pre></pre>
-                </div>
-                
-                <img id="putImgHere"></img>
-                <!-- <img src="https://picsum.photos/200/300" alt="" id="myMail"> -->
-        
-                
-            </form>
-
-        <section id="control-center">
             <button id="get-btn">Click Me!</button>
+
+            <div id="putImgHere"></div>
+
+                <h4 id="instruction">Please enter your email address to save the image.</h4>
+                <h3>Email:</h3>
+                <form id="form">
+                    <div class="inputBox">
+                        <input type="email" id="email"
+                        placeholder="Enter Email Address">
+                        <span id="text"></span>
+                    </div>
+                    <div class="inputBox">
+                        <button id="post-btn" onclick="validation()">Save</button>
+                    </div>
+                    <div id='msg'>
+                        <pre></pre>
+                    </div>
+                    
+                    
             
+                    
+                </form>
+
+            <!-- <section id="control-center">
+                
+                
+                
+            </section> -->
+                
+            <!-- <img src="https://picsum.photos/200/300" alt="" id="myImg"> -->
+            <!-- <span id="generator"></span> -->
             
-        </section>
-            
-        <!-- <img src="https://picsum.photos/200/300" alt="" id="myImg">
-        <span id="generator"></span> -->
-        
-        <div id="output" class="img-output flex"></div>
+            <div id="output" class="img-output flex"></div>
+        </main>
         
     </body>
 </html>
