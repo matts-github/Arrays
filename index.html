@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <title>Random Image Generator</title>
     <head>
+        <title>Random Image Generator</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="js/main.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script&family=Lobster&family=Shizuru&display=swap" rel="stylesheet">
     </head>
     <body>
-        
-        <header>
-            <h1>Random Image Generator!</h1>
-        </header> 
-        
-        
-
-        <div src="https://picsum.photos/200/300" id="result">
-
-        </div>
-
-            
-
-        <section id="control-center">
-            <button id="get-btn">Click Me!</button>
+        <main>
+            <header>
+                <h1>Random Image Generator!</h1>
+            </header> 
             
             
-        </section>
 
-        <div id="myImg"></div>
-            
-        <!-- <img src="https://picsum.photos/200/300" alt="" id="myImg">
-        <span id="generator"></span> -->
+            <div src="https://picsum.photos/200/300" id="result">
 
-        <h3>Email:</h3>
-            <form id="form" action="#">
-                <div class="inputBox">
-                    <input type="email" name="" id="email"
-                    placeholder="Enter Email Address">
-                    <span id="text"></span>
-                </div>
-                <div class="inputBox">
-                    <button id="post-btn" onclick="validation()">Save</button>
-                </div>
-                <div id='msg'>
-                    <pre></pre>
-                </div>
+            </div>
+
+                
+
+            <section id="control-center">
+                <button id="get-btn">Click Me!</button>
                 
                 
-                <!-- <img src="https://picsum.photos/200/300" alt="" id="myMail"> -->
-        
+            </section>
+
+            <div id="myImg"></div>
                 
-            </form>
-        
-        <div id="output" class="img-output flex"></div>
-        
+            <!-- <img src="https://picsum.photos/200/300" alt="" id="myImg">
+            <span id="generator"></span> -->
+
+            <h3>Please Enter your Email:</h3>
+                <form id="form" action="#">
+                    <div class="inputBox">
+                        <input type="email" name="" id="email"
+                        placeholder="Enter Email Address">
+                        <span id="text"></span>
+                    </div>
+                    <div class="inputBox">
+                        <button id="post-btn" onclick="validation()">Save</button>
+                    </div>
+                    <div id='msg'>
+                        <pre></pre>
+                    </div>
+                    
+                    
+                    <!-- <img src="https://picsum.photos/200/300" alt="" id="myMail"> -->
+            
+                    
+                </form>
+            
+            <div id="output" class="img-output flex"></div>
+        </main>
     </body>
 </html>
