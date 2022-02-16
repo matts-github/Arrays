@@ -12,16 +12,10 @@ const getData = () => {
   const randomPage = Math.floor(Math.random() * (10) + 1)
   axios.get(`${picsumURL}${randomPage}&limit=100`)
     .then(response => {
-
-      let email = document.getElementById('email').value;
-      let pic = response.data[`${randomPage}`]['download_url'];
       console.log(response.data[`${randomPage}`]['download_url']);
-      document.getElementById("putImgHere").innerHTML = `<img src=${pic}/>`;
+      document.getElementById("myImg").src = response.data[`${randomPage}`]['download_url'];
   });
-
 };
-
-window.onload = getData();
 
 const getEmail = () => {
   const randomPage = Math.floor(Math.random() * (10) + 1)
@@ -47,7 +41,7 @@ const getEmail = () => {
       // savedEmails = { ...savedEmails, [email]: pic};
       console.log(savedEmails);
       for (var i = 0; i < [savedEmails].length; i++) {
-      // document.getElementById('output').innerHTML = JSON.stringify(email);
+      document.getElementById('output').innerHTML = JSON.stringify(email);
       for (var j = 0; j < savedEmails[email].length; j++) {
         
         // Defining variable
@@ -62,7 +56,7 @@ const getEmail = () => {
             //     JSON.stringify(email);
 
             // Variables for key and value
-            let emailToAdd = `<div id="title"><h3> ${JSON.stringify(email)}</h3></div>`;
+            let emailToAdd = `<h3> ${JSON.stringify(email)}</h3>`;
             let imgsToAdd = "";
 
             // Looping through the entire object
