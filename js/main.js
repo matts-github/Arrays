@@ -72,7 +72,7 @@ const getEmail = () => {
                 //     savedEmails[email][j] +
                 //     '" style="width:10px height:10px" />';
                 console.log(savedEmails[email]);
-
+                document.getElementById("myImg").innerHTML = `<img src=${pic}/>`;
                 // Variable with the image loop attatched to it
                 let imgToAdd = `<img src=${savedEmails[email][j]} style="width:10px height:10px" />`;
                 
