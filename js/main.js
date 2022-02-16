@@ -44,6 +44,7 @@ const getEmail = () => {
       // savedEmails = { ...savedEmails, [email]: pic};
       console.log(savedEmails);
       for (var i = 0; i < [savedEmails].length; i++) {
+      document.getElementById('output').innerHTML = `<h3 id=hide> ${JSON.stringify(email)}</h3>`;
       for (var j = 0; j < savedEmails[email].length; j++) {
         
         // Defining variable
@@ -58,7 +59,7 @@ const getEmail = () => {
             //     JSON.stringify(email);
 
             // Variables for key and value
-            let emailToAdd = `<h3> ${JSON.stringify(email)}</h3>`;
+            let emailToAdd = `<h3 id="new"> ${JSON.stringify(email)}</h3>`;
             let imgsToAdd = "";
 
             // Looping through the entire object
