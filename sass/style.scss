@@ -2,6 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
+=======
+    font-family: sans-serif;
+>>>>>>> parent of 22e0d50 (html and sass update)
 }
 body {
     // display: flex;
@@ -57,13 +61,6 @@ header {
     border-radius: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-}
-#post-btn:hover {
-    transform: scale(1.1);
-}
-#instruction {
-    font-size: 1.5rem;
-    color: #fff;
 }
 #email-input {
     height: 22px;
