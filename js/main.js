@@ -12,10 +12,13 @@ const getData = () => {
   const randomPage = Math.floor(Math.random() * (10) + 1)
   axios.get(`${picsumURL}${randomPage}&limit=100`)
     .then(response => {
+      let pic = response.data[`${randomPage}`]['download_url'];
       console.log(response.data[`${randomPage}`]['download_url']);
-      document.getElementById("myImg").src = response.data[`${randomPage}`]['download_url'];
+      document.getElementById("myImg").innerHTML = `<img src=${pic}/>`;
   });
 };
+
+window.onload = getData();
 
 const getEmail = () => {
   const randomPage = Math.floor(Math.random() * (10) + 1)
