@@ -2,10 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-=======
-    font-family: sans-serif;
->>>>>>> parent of 22e0d50 (html and sass update)
 }
 body {
     // display: flex;
@@ -21,6 +17,10 @@ body {
     border-radius: 10px;
     font-size: 1.5rem;
     cursor: pointer;
+    width: 80%;
+}
+#get-btn:hover {
+    transform: scale(1.1);
 }
 #putImgHere {
     width: 1500px;
@@ -41,7 +41,7 @@ h1 {
     color: #fff;
     text-align: center;
     margin-top: 25px;
-    font-size: 50px;
+    font-size: 2rem;
 }
 header {
     background-color: #0d1321;
@@ -61,6 +61,9 @@ header {
     border-radius: 10px;
     font-size: 1.5rem;
     cursor: pointer;
+}
+#post-btn:hover {
+    transform: scale(1.1);
 }
 #email-input {
     height: 22px;
@@ -140,6 +143,12 @@ div#msg {
     }
 }
 
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
     img {
         padding-top: 100px;
@@ -193,4 +202,10 @@ div#msg {
     img {
         width: 730px;
     }
+}
+img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }

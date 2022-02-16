@@ -44,7 +44,6 @@ const getEmail = () => {
       // savedEmails = { ...savedEmails, [email]: pic};
       console.log(savedEmails);
       for (var i = 0; i < [savedEmails].length; i++) {
-      document.getElementById('output').innerHTML = JSON.stringify(email);
       for (var j = 0; j < savedEmails[email].length; j++) {
         
         // Defining variable
