@@ -4,6 +4,7 @@
 const getBtn = document.getElementById('get-btn');
 const postBtn = document.getElementById('post-btn');
 var savedEmails = {};
+var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 const picsumURL = 'https://picsum.photos/v2/list?page='
 
@@ -28,10 +29,12 @@ const getEmail = () => {
       let email = document.getElementById('email').value;
       let pic = response.data[`${randomPage}`]['download_url'];
 
-      if (email === "") {
+      if (pattern.test(email) == false) {
         //stop from working
+        return false;
     }else{
        //carry on as usual
+       
     
 
       //check if email is already being used
@@ -123,7 +126,7 @@ function validation()
   var form = document.getElementById("form");
   var email = document.getElementById("email").value;
   var text = document.getElementById("text");
-  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+  
 
   if (email.match(pattern))
   {
