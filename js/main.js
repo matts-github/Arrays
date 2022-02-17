@@ -48,6 +48,7 @@ const getEmail = () => {
       console.log(savedEmails);
       for (var i = 0; i < [savedEmails].length; i++) {
       document.getElementById('output').innerHTML = `<h3 id=hide> ${JSON.stringify(email)}</h3>`;
+      document.getElementById("myImg").innerHTML = `<img src=${pic}/>`;
       for (var j = 0; j < savedEmails[email].length; j++) {
         
         // Defining variable
@@ -87,25 +88,6 @@ const getEmail = () => {
         document.getElementById("output").innerHTML += userCollection;
       }
     };
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    // document.getElementById("putImgHere").src = savedEmails[email].at(-1);
-      // console.log(response.data[`${randomPage}`]['download_url']);
-
-      // const para = document.createElement("p");
-      // para.innerHTML = += '<img src="'+ savedEmails[email][i] +'" style="width:10px height:10px" />';
-      // document.getElementById('output').appendChild(para);
-      
-      // const para = document.createElement("p");
-      // para.innerText = [savedEmails];
-      // document.getElementById('output').(para);
 
     }
 

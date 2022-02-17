@@ -5,7 +5,6 @@
     font-family: 'Architects Daughter', cursive;
 }
 body {
-    // display: flex;
     background-color: #540804;
 }
 #get-btn {
@@ -32,14 +31,8 @@ img {
     width: 220px;
     max-width: 100%;
     padding: 5px;
-    // display: none;
     border-radius: 10px;
 }
-
-// img:hover {
-//     transform: scale(1.1);
-//     transition: .3s;
-// }
 h1 {
     color: #fff;
     text-align: center;
@@ -222,12 +215,6 @@ div#msg {
 @media screen and (min-width: 1260px) {
     
 }
-// #generator p:hover {
-//     color: #540804;
-//     border: #fff;
-//     font-style: italic;
-//     transition: .3s;
-// }
 @media screen and (min-width: 1285px) {
    
 }
