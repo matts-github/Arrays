@@ -21,7 +21,8 @@ const getData = () => {
 
 window.onload = getData();
 
-const getEmail = () => {
+const getEmail = (ev) => {
+  ev.preventDefault();
   const randomPage = Math.floor(Math.random() * (10) + 1)
   axios.get(`${picsumURL}${randomPage}&limit=100`)
     .then(response => {
