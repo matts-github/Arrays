@@ -76,7 +76,7 @@ const getEmail = (ev) => {
                 console.log(savedEmails[email]);
 
                 // Variable with the image loop attatched to it
-                let imgToAdd = `<img src=${savedEmails[email][j]} style="width:10px height:10px" />`;
+                let imgToAdd = `<img src=${savedEmails[email][j]}/>`;
                 
                 imgsToAdd += imgToAdd;
             }
