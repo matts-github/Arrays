@@ -14,7 +14,6 @@ const getData = () => {
   axios.get(`${picsumURL}${randomPage}&limit=100`)
     .then(response => {
       let pic = response.data[`${randomPage}`]['download_url'];
-      console.log(response.data[`${randomPage}`]['download_url']);
       document.getElementById("myImg").innerHTML = `<img id="main" src=${pic}/>`;
   });
 };
@@ -57,24 +56,12 @@ const getEmail = (ev) => {
 
         // Looping through the email keys in the savedEmails object
         for (email in savedEmails) {
-            console.log(`what is: ${JSON.stringify(email)}`);
-            console.log(savedEmails);
-
-            // document.getElementById("output").innerHTML +=
-            //     JSON.stringify(email);
-
             // Variables for key and value
             let emailToAdd = `<h3 id="new"> ${JSON.stringify(email)}</h3>`;
             let imgsToAdd = "";
 
             // Looping through the entire object
             for (var j = 0; j < savedEmails[email].length; j++) {
-                // document.getElementById("output").innerHTML +=
-                //     '<img src="' +
-                //     savedEmails[email][j] +
-                //     '" style="width:10px height:10px" />';
-                console.log(savedEmails[email]);
-
                 // Variable with the image loop attatched to it
                 let imgToAdd = `<img id="card" src=${savedEmails[email][j]}/>`;
                 
