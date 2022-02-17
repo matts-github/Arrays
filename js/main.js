@@ -15,7 +15,7 @@ const getData = () => {
     .then(response => {
       let pic = response.data[`${randomPage}`]['download_url'];
       console.log(response.data[`${randomPage}`]['download_url']);
-      document.getElementById("myImg").innerHTML = `<img src=${pic}/>`;
+      document.getElementById("myImg").innerHTML = `<img id="main" src=${pic}/>`;
   });
 };
 
@@ -49,7 +49,7 @@ const getEmail = (ev) => {
       console.log(savedEmails);
       for (var i = 0; i < [savedEmails].length; i++) {
       document.getElementById('output').innerHTML = `<h3 id=hide> ${JSON.stringify(email)}</h3>`;
-      document.getElementById("myImg").innerHTML = `<img src=${pic}/>`;
+      document.getElementById("myImg").innerHTML = `<img id="main" src=${pic}/>`;
       for (var j = 0; j < savedEmails[email].length; j++) {
         
         // Defining variable
@@ -76,7 +76,7 @@ const getEmail = (ev) => {
                 console.log(savedEmails[email]);
 
                 // Variable with the image loop attatched to it
-                let imgToAdd = `<img src=${savedEmails[email][j]}/>`;
+                let imgToAdd = `<img id="card" src=${savedEmails[email][j]}/>`;
                 
                 imgsToAdd += imgToAdd;
             }

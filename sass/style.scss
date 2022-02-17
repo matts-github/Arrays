@@ -26,9 +26,6 @@ body {
     width: 1500px;
     height: 500px;
 }
-#myImg {
-    height: 100%;
-}
 img {
     padding-top: 100px;
     width: 220px;
@@ -74,7 +71,7 @@ header {
     width: 80%;
 }
 .flex {
-    background-color: #fff;
+    background-color: #292929;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,6 +82,10 @@ header {
     width: 80%;
     overflow: hidden;
     border-radius: 10px;
+}
+#card {
+    height: 250px;
+    width: 250px;
 }
 #new {
     background-color: #292929;
@@ -226,4 +227,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
+#main {
+    height: 600px;
 }
